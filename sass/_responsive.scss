@@ -1,0 +1,31 @@
+// =========================================================
+// BREAKPOINTS
+// =========================================================
+//Medium+
+@media only screen and (min-width: 768px) { 
+	// Forces last in a row to float left, not right
+	.end { float: left !important; } 
+	.vpc_form {
+		.form_field {
+			float: left;
+			width: 45%;
+			margin-right: 2%;
+		}
+		.moreinfo_container { float: none; }
+	}
+}
+//Small-
+@media only screen and (max-width: 767px) { 
+	// Forces last in a row to float left, not right
+	.end { float: left !important; }
+}
+//Mobile-
+@media only screen and (max-width: 480px) {
+	// Forces two up mobile-two to become full width at actual mobile size
+	.row .mobile-two {
+		float: none !important;
+		width: 100% !important;
+	} 
+	// Defaults so all extraneous details in widgets are hidden on smaller screens
+	.sidebar-carriers-info, .sidebar-partners-info, .testimonial-info, .refer-info { display: none; }
+}

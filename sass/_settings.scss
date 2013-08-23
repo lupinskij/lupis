@@ -1,0 +1,31 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "reset";
+
+// =========================================================
+// YOUR THEME'S VARIABLES HERE
+// =========================================================
+// Colors
+// ---------------------------------------------------------
+$color-backgroundBody: #ecf0f2;
+$color-primary: #f16e52;
+$color-black25: #383d40;
+$color-black50: #2c3031;
+$color-textTitle: #383c3f;
+$color-textBody: #989898;
+$color-accent: #929395;
+$color-post: #fff;
+$color-postBorder: #cfd1d0;
+$white: #fff;
+$black: #222;
+
+// Fonts
+// ---------------------------------------------------------
+$headerFontFamily: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$headerFontWeight: normal;
+$headerFontStyle: normal;
+$headerFontColor: $color-textTitle;
+$bodyFontFamily: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$bodyFontWeight: normal;
+$bodyFontStyle: normal;
+$bodyFontColor: $color-textBody;
