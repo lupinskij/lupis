@@ -62,10 +62,10 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 
 		<nav class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 			<ul id="menu-primary-navigation" class="nav-menu responsive-menu">
-				<li class="menu-item"><a href="javascript:;">Work</a></li>
-				<li class="menu-item"><a href="javascript:;">About</a></li>
-				<li class="menu-item"><a href="javascript:;">Contact</a></li>
-				<li class="menu-item"><a href="javascript:;">Connect</a></li>
+				<li class="menu-item"><a href="javascript:;" title="Work">Work</a></li>
+				<li class="menu-item"><a href="javascript:;" title="About">About</a></li>
+				<li class="menu-item"><a href="javascript:;" title="Contact">Contact</a></li>
+				<li class="menu-item"><a href="javascript:;" title="Connect">Connect</a></li>
 			</ul>
 		</nav>
 
@@ -74,6 +74,6 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 		</section>
 		
 		<footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-			<p>&copy; 2013 All rights reserved.</p>
+			<p>&copy; <?php the_time('Y'); ?> All rights reserved.</p>
 		</footer>
 	</header>

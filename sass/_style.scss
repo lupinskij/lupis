@@ -18,10 +18,6 @@
 // =========================================================
 // COMMON CLASSES
 // =========================================================
-// Some settings can be changed in _settings.scss
-.button {}
-.accordion {}
-iframe {}
 
 
 // =========================================================
@@ -32,10 +28,12 @@ iframe {}
 	color: $white;
 }
 html {
-  font-size: 62.5%; /* Sets up the Base 10 stuff */
-  @include box-sizing (border-box); 
+	font-size: 62.5%; /* Sets up the Base 10 stuff */
+	@include box-sizing (border-box); 
 }
-body {}
+body {
+	background-color: $color-backgroundBody;
+}
 img {
 	max-width: 100%;
 }
@@ -45,8 +43,8 @@ img {
 // =========================================================
 
 .site-header {
-	background-color: #3b3b3b;
-	color: #8f8f8f;
+	background-color: $color-black25;
+	color: $color-accent;
 	float: left;
 	font-weight: 700;
 	height: 100%;
@@ -55,10 +53,8 @@ img {
 	text-align: center;
 	width: 265px; 
 
-	a,
-	a:hover {
-		color: #8f8f8f;
-		text-decoration: none;
+	.site-logo {
+		margin-bottom: 2.5em;
 	}
 }
 
@@ -71,29 +67,28 @@ img {
 	width: 100%; 
 
 	li {
-		border-bottom: 1px solid #3b3b3b;
+		border-bottom: 1px solid $color-black25;
 		float: left;
 		list-style-type: none;
 		width: 100%;
 
 		a {
-			background-color: #323232;
-			color: #8f8f8f;
+			background-color: $color-black50;
+			color: $color-accent;
 			display: block;
 			padding: 18px 12px;
 			padding: 1.8rem 1.2rem;
 			text-align: center;
 			text-transform: uppercase;
 			&:hover {
-				background-color: #f26e52;
-				color: #fff;
+				background-color: $color-primary;
+				color: $white;
 			}
 		}
 	}
 }
 	
 .site-info {
-	color: #c3c3c3;
 	padding: 25px;
 	padding: 2.5rem;
 
@@ -105,9 +100,8 @@ img {
 		margin: 0 auto;
 		background: #8f8f8f;
 	}
-
 	p {
-		color: #c3c3c3;
+		color: lighten($color-accent, 23);
 		line-height: 17px;
 		line-height: 1.7rem;
 	}
@@ -116,7 +110,8 @@ img {
 .site-footer p {
 	letter-spacing: 1px;
 	letter-spacing: 0.1rem;
-	text-transform: uppercase; }
+	text-transform: uppercase;
+}
 
 // =========================================================
 // CONTENT BOILER PLATE
@@ -158,8 +153,22 @@ p {
 	font-weight: $bodyFontWeight;
 	@include font-size(1.6);
 }
-a {}
+a {
+	@extend p;
+	text-decoration: none;
+}
+a, 
+button, 
+input:focus, 
+input[type="button"], 
+input[type="reset"], 
+input[type="submit"], 
+textarea {
+	@include transition(all 0.2s ease-in-out);
+}
+
 a img { border: 0; }
+
 // Formating for all page/post content
 .forPost, .forPage, .content {
 	p {}
