@@ -31,17 +31,17 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-		<!-- dns prefetch -->
+		<?php // dns prefetch ?>
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-		<!-- meta -->
+		<?php // meta ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-		<!-- icons -->
+		<?php // icons ?>
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
@@ -57,7 +57,7 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 
 	<header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<div class="site-logo">
-			<a href="javascript:;" class="group"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" class="site-logo-image" alt="Jeff Lupinski"></a>
+			<a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" class="site-logo-image" alt="Jeff Lupinski"></a>
 		</div>
 
 		<nav class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -84,7 +84,7 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 		</nav>
 
 		<section class="site-info" itemscope="itemscope">
-			<p>Morbi leo risus, porta ac consectetur ac, vestibulum at. Maecenas sed diam eget risus euro varius blandit sit amet non. </p>
+			<p>Hello, I'm Jeff Lupinski. I'm a graphic designer who specializes in web UI/UX design, mobile responsive web, and front end development.</p>
 		</section>
 		
 		<footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">

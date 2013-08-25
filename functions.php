@@ -160,8 +160,8 @@
         wp_enqueue_script('modernizr'); // Enqueue it!
 
         // Scripts
-		wp_register_script('scripts', '/js/scripts.js', array(), '2.6.2'); // dev scripts
-        wp_enqueue_script('scripts'); // Enqueue it!
+		wp_register_script('lupisscripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0'); // Custom scripts
+        wp_enqueue_script('lupisscripts'); // Enqueue it!
 	}
 
 	// Load styles

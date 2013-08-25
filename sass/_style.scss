@@ -28,6 +28,7 @@
 	color: $white;
 }
 html {
+	font-family: $fontFamily;
 	font-size: 62.5%; /* Sets up the Base 10 stuff */
 	@include box-sizing (border-box); 
 }
@@ -53,26 +54,23 @@ img {
 	width: 265px; 
 
 	.site-logo {
-		margin-bottom: 2.5em;
+		margin-bottom: 4.5em;
 	}
 }
 
 .nav-header ul {
-	clear: both;
 	letter-spacing: 1px;
 	letter-spacing: 0.1rem;
 	overflow: hidden;
-	padding: 0;
-	width: 100%; 
 
 	li {
+		background-color: $color-black50;
 		border-bottom: 1px solid $color-black25;
 		float: left;
 		list-style-type: none;
 		width: 100%;
 
 		a {
-			background-color: $color-black50;
 			color: $color-accent;
 			display: block;
 			font-weight: 700;
@@ -81,7 +79,12 @@ img {
 			text-align: center;
 			text-transform: uppercase;
 			&:hover {
-				background-color: $color-primary;
+				color: $white;
+			}
+		}
+		&.current-menu-item {
+			background-color: $color-primary;
+			a {
 				color: $white;
 			}
 		}
@@ -89,6 +92,7 @@ img {
 }
 	
 .site-info {
+	margin-top: 2em;
 	padding: 25px;
 	padding: 2.5rem;
 
@@ -109,6 +113,7 @@ img {
 }
 
 .site-footer p {
+	font-weight: 700;
 	letter-spacing: 1px;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
@@ -119,12 +124,47 @@ img {
 	padding: 4em 5em;
 }
 
+.post {
+	background-color: #fff;
+	max-width: 850px;
+	@include box-shadow (0px 1px 0px rgba(170, 170, 170, 0.4));
+}
+
+.date {
+	background: #3b3b3b;
+	color: $white;
+	display: inline-block;
+	margin-bottom: 1em;
+	padding: 7px 30px 10px;
+	text-transform: uppercase;
+	@include font-size(1.5);
+}
+
+.clock {
+	font-family: "Icon";
+	padding-right: 7px;
+	@include font-size(3.3);
+}
+
+.port-title {
+	color: $color-black50;
+	font-weight: 300;
+}
+
+.port-info {
+	padding: 0 4em;
+}
+
+.tags p {
+	color: $color-primary;
+}
+
+
 // =========================================================
 // CONTENT BOILER PLATE
 // =========================================================
 h1, h2, h3, h4, h5, h6 {
 	color: $headerFontColor;
-	font-family: $headerFontFamily;
 	font-style: $headerFontStyle;
 	font-weight: $headerFontWeight;
 }
@@ -154,7 +194,6 @@ h6 {
 }
 p {
 	color: $bodyFontColor;
-	font-family: $bodyFontFamily;
 	font-style: $bodyFontStyle;
 	font-weight: $bodyFontWeight;
 	@include font-size(1.3);

@@ -5,7 +5,7 @@
 	
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 	
-		<!-- article -->
+		<?php //article ?>
 		<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
 			<?php the_content(); ?>
@@ -17,19 +17,19 @@
 			<?php edit_post_link(); ?>
 			
 		</section>
-		<!-- /article -->
+		<?php //article ?>
 		
 	<?php endwhile; ?>
 	
 	<?php else: ?>
 	
-		<!-- article -->
+		<?php //article ?>
 		<section>
 			
 			<h2><?php _e( 'Sorry, nothing to display.', 'lupis' ); ?></h2>
 			
 		</section>
-		<!-- /article -->
+		<?php //article ?>
 	
 	<?php endif; ?>
 

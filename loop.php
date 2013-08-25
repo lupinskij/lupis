@@ -10,16 +10,19 @@
 			</a>
 		<?php endif; ?>
 		<?php //post thumbnail ?>
+
+		<?php //post details ?>
+		<div class="date">
+			<i class="clock">&#128340;</i>
+			<span><?php the_time('F j, Y'); ?></span>
+		</div>
+		<?php //post details ?>
 		
 		<?php //post title ?>
 		<h2>
 			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 		</h2>
 		<?php //post title ?>
-		
-		<?php //post details ?>
-		<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-		<?php //post details ?>
 		
 		<?php lupisWP_excerpt('lupisWP_index'); ?>
 		
