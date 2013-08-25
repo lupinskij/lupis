@@ -61,12 +61,26 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 		</div>
 
 		<nav class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-			<ul id="menu-primary-navigation" class="nav-menu responsive-menu">
-				<li class="menu-item"><a href="javascript:;" title="Work">Work</a></li>
-				<li class="menu-item"><a href="javascript:;" title="About">About</a></li>
-				<li class="menu-item"><a href="javascript:;" title="Contact">Contact</a></li>
-				<li class="menu-item"><a href="javascript:;" title="Connect">Connect</a></li>
-			</ul>
+		<?php 
+			// MAIN NAVIGATION //
+			// Uses Wordpress menus to generate main navigation
+			$navGridSize = (string)$brewer_grid_options['nav_main'];
+			$mainNav = array(
+				'theme_location'	=> 'navMain',										// Location in the theme to be used. Needs to be registered
+				'menu'				=> 'Main Navigation', 								// Name of menu desired. Accepts ID, slug, name
+				'container'			=> 'nav', 											// Container type (div or nav (keep nav for semantics))
+				'container_class'	=> 'main ' . $navGridSize . ' columns top-bar', 	// Container class. **NEEDS TO BE** "top-bar" for Foundation navigation to work (http://foundation.zurb.com/docs/navigation.php)
+				'container_id'		=> '',												// Container ID
+				'menu_class'		=> 'mainMenu',										// Adds class to navigation UL.
+				'menu_id'			=> 'changling',										// Adds ID to navigation UL. If you wish to use selectnav.js on this menu (changes menu into a select field for mobile usage), keep this assigned as changling
+				'before'			=> '',												// Output text before the <a>
+				'after'				=> '',												// Output text after the </a>
+				'link_before'		=> '',												// Output text before the link text
+				'link_after'		=> '',												// Output text after the link text
+				'depth'				=> 3												// How many levels of the hierarchy are to be included where 0 means all
+			);
+			wp_nav_menu($mainNav);
+		?>
 		</nav>
 
 		<section class="site-info" itemscope="itemscope">
@@ -77,3 +91,6 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 			<p>&copy; <?php the_time('Y'); ?> All rights reserved.</p>
 		</footer>
 	</header>
+
+	<div class="site-inner">
+		<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
