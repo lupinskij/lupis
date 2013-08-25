@@ -1,12 +1,18 @@
 jQuery(window).load(function(){
 
-}); //Window Load
+}); // Window Load
 
 
 jQuery(document).ready(function(){
 	
 
-	//Navigation Hover
+    // Logo Animation
+    $('#site-logo').hover(
+       function(){ $(this).addClass('floating') },
+       function(){ $(this).removeClass('floating') }
+    );
+
+	// Navigation Hover
     $('.top-bar li')
         .mouseover(function () {
             $(this).siblings().css({
@@ -20,4 +26,4 @@ jQuery(document).ready(function(){
         });  
 
 
-}); //Document Ready
+}); // Document Ready

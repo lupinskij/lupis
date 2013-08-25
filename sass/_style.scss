@@ -39,10 +39,46 @@ img {
 	max-width: 100%;
 }
 
+.floating{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(0%);	
+	}
+	50% {
+		transform: translateY(8%);	
+	}	
+	100% {
+		transform: translateY(0%);
+	}			
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);	
+	}
+	50% {
+		-webkit-transform: translateY(8%);	
+	}	
+	100% {
+		-webkit-transform: translateY(0%);
+	}			
+}
+
 // =========================================================
 // PAGE LAYOUT & BASIC STYLES
 // =========================================================
 
+// Header
 .site-header {
 	background-color: $color-black25;
 	color: $color-accent;
@@ -119,19 +155,21 @@ img {
 	text-transform: uppercase;
 }
 
+//Page
 .site-inner {
 	margin-left: 265px;
 	padding: 4em 5em;
 }
 
+//Post
 .post {
-	background-color: #fff;
+	background-color: $white;
 	max-width: 850px;
 	@include box-shadow (0px 1px 0px rgba(170, 170, 170, 0.4));
 }
 
 .date {
-	background: #3b3b3b;
+	background: $color-black25;
 	color: $white;
 	display: inline-block;
 	margin-bottom: 1em;
@@ -143,6 +181,8 @@ img {
 .clock {
 	font-family: "Icon";
 	padding-right: 7px;
+	text-rendering: optimizeLegibility;
+  	-webkit-font-smoothing: antialiased;
 	@include font-size(3.3);
 }
 
@@ -167,35 +207,53 @@ h1, h2, h3, h4, h5, h6 {
 	color: $headerFontColor;
 	font-style: $headerFontStyle;
 	font-weight: $headerFontWeight;
+	text-rendering: optimizeLegibility;
 }
 h1 {
 	@include font-size(3.7);
-	a {}
+	a {
+		@extend h1;
+	}
 }
 h2 {
 	@include font-size(3.0);
-	a {}
+	a {
+		@extend h2;
+	}
 }
 h3 {
+	line-height: 1;
+	margin: 1.5em 0 0.5em;
+	padding-bottom: 0.15em;
 	@include font-size(2.5);
-	a {}
+	a {
+		@extend h3;
+	}
 }
 h4 {
 	@include font-size(2.1);
-	a {}
+	a {
+		@extend h4;
+	}
 }
 h5 {
 	@include font-size(1.9);
-	a {}
+	a {
+		@extend h5;
+	}
 }
 h6 {
 	@include font-size(1.6);
-	a {}
+	a {
+		@extend h6;
+	}
 }
 p {
 	color: $bodyFontColor;
 	font-style: $bodyFontStyle;
 	font-weight: $bodyFontWeight;
+	line-height: 19px;
+	line-height: 1.9rem;
 	@include font-size(1.3);
 }
 a {

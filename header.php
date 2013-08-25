@@ -57,7 +57,7 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 
 	<header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<div class="site-logo">
-			<a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" class="site-logo-image" alt="Jeff Lupinski"></a>
+			<a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
 		</div>
 
 		<nav class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
