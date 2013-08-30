@@ -82,12 +82,14 @@ img {
 .site-header {
 	background-color: $color-black25;
 	color: $color-accent;
-	float: left;
-	height: 100%;
-	padding-top: 40px;
-	position: fixed;
-	text-align: center;
-	width: 265px; 
+  text-align: center;
+  @media(min-width: 76em) {
+    width: 265px;
+    position: fixed;
+    padding-top: 40px;
+    height: 100%;
+    float: left;
+  }
 
 	.site-logo {
 		margin-bottom: 4.5em;
@@ -128,9 +130,13 @@ img {
 }
 	
 .site-info {
-	margin-top: 2em;
-	padding: 25px;
-	padding: 2.5rem;
+  display: none;
+  @media (min-width: 70em) {
+    display: block;
+    margin-top: 2em;
+    padding: 25px;
+    padding: 2.5rem;
+  }
 
 	&:after {
 		content: '';
@@ -149,23 +155,33 @@ img {
 }
 
 .site-footer p {
-	font-weight: 700;
-	letter-spacing: 1px;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
+  display: none;
+  @media (min-width: 70em) {
+    display: block;
+    font-weight: 700;
+    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
 }
 
 //Page
 .site-inner {
-	margin-left: 265px;
-	padding: 4em 5em;
+  padding: 4em 5em;
+  @media (min-width: 70em) {
+    margin-left: 265px;
+  }
 }
 
 //Post
 .post {
-	background-color: $white;
-	max-width: 850px;
-	@include box-shadow (0px 1px 0px rgba(170, 170, 170, 0.4));
+  background-color: $white;
+  margin: 0 auto;
+  max-width: 850px;
+  @include box-shadow (0px 1px 1px rgba(170, 170, 170, 0.4));
+  @media (min-width: 70em) {
+    margin: 0;
+  }
 }
 
 .date {
@@ -178,8 +194,12 @@ img {
 	@include font-size(1.5);
 }
 
-.clock {
+.icon {
 	font-family: "Icon";
+}
+
+.clock {
+  @extend .icon;
 	padding-right: 7px;
 	text-rendering: optimizeLegibility;
   	-webkit-font-smoothing: antialiased;
