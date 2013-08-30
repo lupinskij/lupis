@@ -7,10 +7,18 @@
 			<?php //post thumbnail ?>
 			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-				</a>
-			<?php endif; ?>
-			<?php //post thumbnail ?>
+					<?php the_post_thumbnail('full'); // Declare pixel size you need inside the array ?>
+          <div class="overlay">
+            <?php if (true) : ?>
+            <div class="link icon">🔗</div>
+            <?php endif; ?>
+            <?php if (true) : ?>
+            <div class="look icon"></div>
+            <?php endif; ?>
+          </div>
+        </a>
+      <?php endif; ?>
+      <?php //post thumbnail ?>
 		</section>
 
 		<section class="port-info">
