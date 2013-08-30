@@ -17,7 +17,6 @@
 }
 
 .port-thumbnail {
-  cursor: pointer;
   float: left;
   margin-right: 55px;
   z-index: 50;
@@ -38,6 +37,7 @@
     @include border-radius(5em);
   }
   .link {
+    cursor: pointer;
     top: -1em;
     margin-top: -0.5em;
     margin-left: -1.25em;
