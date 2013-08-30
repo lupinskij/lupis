@@ -6,11 +6,19 @@
 		<section class="port-thumbnail">	
 			<?php //post thumbnail ?>
 			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-				</a>
-			<?php endif; ?>
-			<?php //post thumbnail ?>
+				<a <?php if (get_the_content()) { ?> href="<?php the_permalink(); ?>" <?php } ?>>
+					<?php the_post_thumbnail('full'); // Declare pixel size you need inside the array ?>
+          <div class="overlay">
+            <?php if (get_field('external_link')) : ?>
+            <div class="link icon" title="See this site in it's natural habitat." data-url="<?php the_field('external_link'); ?>">🔗</div>
+            <?php endif; ?>
+            <?php if (get_the_content()) : ?>
+            <div class="look icon" title="Read the project brief."></div>
+            <?php endif; ?>
+          </div>
+        </a>
+      <?php endif; ?>
+      <?php //post thumbnail ?>
 		</section>
 
 		<section class="port-info">
@@ -27,9 +35,7 @@
 			</h3>
 			<?php //post title ?>
 			
-			<?php lupisWP_excerpt('lupisWP_index'); ?>
-			
-			<?php edit_post_link(); ?>
+			<?php the_field('excerpt'); ?>
 		</section>
 		
 	</article>
