@@ -60,7 +60,8 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 			<a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
 		</div>
 
-		<nav class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+		<a href="#menu" class="menu-link">Menu</a>
+		<nav id="menu" class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 		<?php 
 			// MAIN NAVIGATION //
 			// Uses Wordpress menus to generate main navigation

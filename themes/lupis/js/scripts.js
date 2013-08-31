@@ -23,7 +23,18 @@ jQuery(document).ready(function(){
         $(this).siblings().css({
             opacity: 1
         })
-    });  
+    });
+
+  // Responsive Menu
+  $('body').addClass('js');
+  var $menu = $('#menu'),
+    $menulink = $('.menu-link');
+
+  $menulink.click(function() {
+    $menulink.toggleClass('active');
+    $menu.toggleClass('active');
+    return false;
+  });
 
   // Link in portfolio piece
   $('.port-thumbnail .link').click(function() {

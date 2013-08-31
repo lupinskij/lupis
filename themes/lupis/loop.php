@@ -31,11 +31,13 @@
 			
 			<?php //post title ?>
 			<h3 class="post-title">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+				<?php the_title(); ?>
 			</h3>
 			<?php //post title ?>
 			
 			<?php the_field('excerpt'); ?>
+
+			<div class="tags"><?php the_tags( __( '', 'lupis' ), ', ', ''); // Separated by commas with a line break at the end ?></div>
 		</section>
 		
 	</article>

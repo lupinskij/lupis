@@ -3,7 +3,9 @@
 	<!-- section -->
 	<section role="main">
 	
-		<h1><?php _e( 'Archives', 'lupis' ); ?></h1>
+		<h1><?php single_tag_title(); ?></h1>
+
+		<br>
 	
 		<?php get_template_part('loop'); ?>
 		
@@ -11,7 +13,5 @@
 	
 	</section>
 	<!-- /section -->
-	
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -15,10 +15,17 @@
 	}
 }
 
-// =========================================================
-// COMMON CLASSES
-// =========================================================
+%smallTitle {
+	font-weight: 700;
+	letter-spacing: 1px;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	@include font-size(1.3);
+}
 
+%padding {
+	padding: 4em;
+}
 
 // =========================================================
 // FURNITURE
@@ -27,52 +34,27 @@
 	background-color: $color-primary;
 	color: $white;
 }
+
+* {
+	position: relative;
+	@include transition(color 300ms, background 300ms);
+	@include box-sizing(border-box);
+}
+
 html {
 	font-family: $fontFamily;
 	font-size: 62.5%; /* Sets up the Base 10 stuff */
 	@include box-sizing (border-box); 
 }
+
 body {
 	background-color: $color-backgroundBody;
 }
+
 img {
 	max-width: 100%;
 }
 
-.floating{
-	animation-name: floating;
-	-webkit-animation-name: floating;
-
-	animation-duration: 1.5s;	
-	-webkit-animation-duration: 1.5s;
-
-	animation-iteration-count: infinite;
-	-webkit-animation-iteration-count: infinite;
-}
-
-@keyframes floating {
-	0% {
-		transform: translateY(0%);	
-	}
-	50% {
-		transform: translateY(8%);	
-	}	
-	100% {
-		transform: translateY(0%);
-	}			
-}
-
-@-webkit-keyframes floating {
-	0% {
-		-webkit-transform: translateY(0%);	
-	}
-	50% {
-		-webkit-transform: translateY(8%);	
-	}	
-	100% {
-		-webkit-transform: translateY(0%);
-	}			
-}
 
 // =========================================================
 // PAGE LAYOUT & BASIC STYLES
@@ -82,17 +64,17 @@ img {
 .site-header {
 	background-color: $color-black25;
 	color: $color-accent;
-  text-align: center;
-  @media(min-width: 76em) {
-    width: 265px;
-    position: fixed;
-    padding-top: 40px;
-    height: 100%;
-    float: left;
-  }
+	text-align: center;
+	@media(min-width: 1183px) {
+		width: 265px;
+		position: fixed;
+		padding-top: 40px;
+		height: 100%;
+		float: left;
+	}
 
 	.site-logo {
-		margin-bottom: 4.5em;
+		margin-bottom: 1.75em;
 	}
 }
 
@@ -130,13 +112,13 @@ img {
 }
 	
 .site-info {
-  display: none;
-  @media (min-width: 70em) {
-    display: block;
-    margin-top: 2em;
-    padding: 25px;
-    padding: 2.5rem;
-  }
+	display: none;
+	@media (min-width: 1183px) {
+		display: block;
+		margin-top: 2em;
+		padding: 25px;
+		padding: 2.5rem;
+	}
 
 	&:after {
 		content: '';
@@ -155,33 +137,108 @@ img {
 }
 
 .site-footer p {
-  display: none;
-  @media (min-width: 70em) {
-    display: block;
-    font-weight: 700;
-    letter-spacing: 1px;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-  }
+	display: none;
+	@media (min-width: 1183px) {
+		display: block;
+		font-weight: 700;
+		letter-spacing: 1px;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
 }
 
 //Page
 .site-inner {
-  padding: 4em 5em;
-  @media (min-width: 70em) {
-    margin-left: 265px;
-  }
+	padding: 4em 5em;
+	@media (min-width: 1183px) {
+		margin-left: 265px;
+	}
 }
 
 //Post
 .post {
-  background-color: $white;
-  margin: 0 auto;
-  max-width: 850px;
-  @include box-shadow (0px 1px 1px rgba(170, 170, 170, 0.4));
-  @media (min-width: 70em) {
-    margin: 0;
-  }
+	background-color: $white;
+	margin: 0 auto 5em;
+	max-width: 850px;
+	@include box-shadow (0px 1px 1px rgba(170, 170, 170, 0.4));
+	@extend %group;
+	@media (min-width: 1183px) {
+		margin: 0 0 5em;
+	}
+
+	.tags {
+		color: $color-primary;
+		padding-top: 1em;
+		& a {
+			@extend .tags;
+		}
+	}
+}
+
+.port-thumbnail {
+	float: left;
+	z-index: 50;
+	overflow: hidden;
+	@media (min-width: 877px) {
+		margin-right: 5%;
+	}
+
+	a {
+		display: block;
+	}
+	.icon {
+		width: 1em;
+		height: 1em;
+		position: absolute;
+		left: 50%;
+		font-size: 5em;
+		text-align: center;
+		padding: 0.35em 0;
+		background-color: #fff;
+		color: $black;
+		@include border-radius(5em);
+	}
+	.link {
+		cursor: pointer;
+		top: -1em;
+		margin-top: -0.5em;
+		margin-left: -1.25em;
+		@include transition(top 200ms);
+		&:only-child {
+			margin-left: -0.5em;
+		}
+	}
+	.look {
+		bottom: -1em;
+		margin-bottom: -0.5em;
+		margin-left: 0.25em;
+		@include transition(bottom 200ms);
+		&:only-child {
+			margin-left: -0.5em;
+		}
+	}
+	.overlay {
+		z-index: 52;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+	&:hover {
+		.overlay {
+			background-color: rgba($color-primary, 0.6);
+		}
+		.link {
+			top: 50%;
+		}
+		.look {
+			bottom: 50%;
+		}
+	}
+	img {
+		display: block;
+	}
 }
 
 .date {
@@ -199,7 +256,7 @@ img {
 }
 
 .clock {
-  @extend .icon;
+	@extend .icon;
 	padding-right: 7px;
 	text-rendering: optimizeLegibility;
   	-webkit-font-smoothing: antialiased;
@@ -213,12 +270,55 @@ img {
 
 .port-info {
 	padding: 0 4em;
+	p a {
+		color: $color-primary;
+		text-decoration: underline;
+	}
 }
 
 .tags p {
 	color: $color-primary;
 }
 
+.page-numbers {
+	background: $color-accent;
+	border-radius: 3px;
+	color: $white;
+	font-size: 13px;
+	padding: 1em;
+	&:hover {
+		background: darken($color-accent, 15);
+	}
+}
+
+// =========================================================
+// PAGES
+// =========================================================
+
+.single .post {
+	@extend %padding;
+}
+
+
+.about {
+	@extend %padding;
+	h2 {
+
+	}
+	h3 {
+		font-size: 16px;
+		font-weight: 900;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	hr {
+		
+	}
+	ul {
+		list-style: disc;
+		margin-left: 3em;
+	}
+}
 
 // =========================================================
 // CONTENT BOILER PLATE
@@ -233,6 +333,9 @@ h1 {
 	@include font-size(3.7);
 	a {
 		@extend h1;
+	}
+	.archive & {
+		padding-bottom: 0.500em;
 	}
 }
 h2 {
@@ -268,7 +371,8 @@ h6 {
 		@extend h6;
 	}
 }
-p {
+p,
+li {
 	color: $bodyFontColor;
 	font-style: $bodyFontStyle;
 	font-weight: $bodyFontWeight;
@@ -292,29 +396,42 @@ textarea {
 
 a img { border: 0; }
 
-// Formating for all page/post content
-.forPost, .forPage, .content {
-	p {}
-	ul, ol { 
-		li {}
-	}
-	dl {}
-	dt {}
-	dd {}
-	pre {}
-	blockquote {}
+
+// =========================================================
+// ANIMATIONS
+// =========================================================
+
+.floating{
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
 }
 
+@keyframes floating {
+	0% {
+		transform: translateY(0%);	
+	}
+	50% {
+		transform: translateY(8%);	
+	}	
+	100% {
+		transform: translateY(0%);
+	}			
+}
 
-// =========================================================
-// WORDPRESS STYLES
-// =========================================================
-// Wordpress User Generated Content
-.alignnone, a img.alignnone, .wp-caption.alignnone {}
-.aligncenter, div.aligncenter, a img.aligncenter {}
-.alignright, a img.alignright, .wp-caption.alignright {}
-.alignleft, a img.alignleft, .wp-caption.alignleft {}
-.wp-caption {
-	img {}
-	p.wp-caption-text {}
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(0%);	
+	}
+	50% {
+		-webkit-transform: translateY(8%);	
+	}	
+	100% {
+		-webkit-transform: translateY(0%);
+	}			
 }

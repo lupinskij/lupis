@@ -1,31 +1,52 @@
 // =========================================================
-// BREAKPOINTS
+// MENU
 // =========================================================
-//Medium+
-@media only screen and (min-width: 768px) { 
-	// Forces last in a row to float left, not right
-	.end { float: left !important; } 
-	.vpc_form {
-		.form_field {
-			float: left;
-			width: 45%;
-			margin-right: 2%;
-		}
-		.moreinfo_container { float: none; }
+a.menu-link {
+    float: right;
+    display: block;
+    padding: 1em;
+}
+
+nav[role=navigation]{
+	clear: both;
+	@include transition (all 0.3s ease-out);
+
+	.js & {
+		overflow: hidden;
+		max-height: 0;
+	}
+	&.active {
+		max-height: 15em;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li a {
+		display: block;
+		padding: 0.8em;
 	}
 }
-//Small-
-@media only screen and (max-width: 767px) { 
-	// Forces last in a row to float left, not right
-	.end { float: left !important; }
-}
-//Mobile-
-@media only screen and (max-width: 480px) {
-	// Forces two up mobile-two to become full width at actual mobile size
-	.row .mobile-two {
-		float: none !important;
-		width: 100% !important;
-	} 
-	// Defaults so all extraneous details in widgets are hidden on smaller screens
-	.sidebar-carriers-info, .sidebar-partners-info, .testimonial-info, .refer-info { display: none; }
+
+@media screen and (min-width: 1183px) {
+	a.menu-link {
+	   display: none;
+	}
+
+	nav[role=navigation] {
+		.js & {
+			max-height: none;
+		}
+		ul {
+			margin: 0 0 0 -0.25em;
+			border: 0;
+		}
+		li {
+			display: inline-block;
+			margin: 0 0.25em;
+			a {
+				border: 0;
+			}
+		}
+	}
 }
