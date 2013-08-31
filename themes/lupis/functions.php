@@ -91,6 +91,16 @@
 	    return $classes;
 	}
 
+	//Page Slug Body Class
+	function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+	$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	return $classes;
+	}
+
+
 	// Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
 	function remove_thumbnail_dimensions( $html )
 	{
@@ -202,6 +212,7 @@
 	add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 	add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 	add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
+	add_filter( 'body_class', 'add_slug_body_class' );
 
 	// Remove Filters
 	remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether

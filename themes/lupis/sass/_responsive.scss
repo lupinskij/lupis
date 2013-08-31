@@ -3,8 +3,8 @@
 // =========================================================
 a.menu-link {
     float: right;
-    display: block;
-    padding: 1em;
+    display: inline-block;
+    @include font-size(7.5);
 }
 
 nav[role=navigation]{

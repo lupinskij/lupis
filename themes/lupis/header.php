@@ -56,11 +56,13 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 	<body <?php body_class(); ?>>
 
 	<header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-		<div class="site-logo">
-			<a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
-		</div>
+		<div class="site-header-wrapper">
+			<div class="site-logo">
+				<a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
+			</div>
 
-		<a href="#menu" class="menu-link">Menu</a>
+			<a href="#menu" class="menu-link icon">&#9776;</a>
+		</div>
 		<nav id="menu" class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 		<?php 
 			// MAIN NAVIGATION //

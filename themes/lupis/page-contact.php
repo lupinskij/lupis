@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
+<?php //article ?>
+<article id="post-<?php the_ID(); ?>" class="about post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+	<h1 class="page-title"><?php the_title(); ?></h1>
 
 	<?php the_content(); ?>
 
@@ -16,6 +20,8 @@
 	<?php //article ?>
 
 <?php endif; ?>
+
+</article>
 
 
 <?php get_footer(); ?>

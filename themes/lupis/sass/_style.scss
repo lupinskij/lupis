@@ -68,13 +68,30 @@ img {
 	@media(min-width: 1183px) {
 		width: 265px;
 		position: fixed;
-		padding-top: 40px;
+		padding: 40px 0 0;
 		height: 100%;
 		float: left;
 	}
 
 	.site-logo {
-		margin-bottom: 1.75em;
+		display: inline-block;
+		float: left;
+		width: 90px;
+		@media(min-width: 1183px) {
+			float: none;
+			margin-bottom: 1.75em;
+			width: 131px;
+		}
+	}
+}
+
+.site-header-wrapper {
+	@extend %group;
+	margin: 0 auto;
+	max-width: 950px;
+	padding: 2em;
+	@media (min-width: 768px) {
+		padding: 2em 5em;
 	}
 }
 
@@ -109,6 +126,10 @@ img {
 			}
 		}
 	}
+}
+
+.single .menu-item-home {
+	@extend .current-menu-item;
 }
 	
 .site-info {
@@ -149,7 +170,10 @@ img {
 
 //Page
 .site-inner {
-	padding: 4em 5em;
+	padding: 2em;
+	@media (min-width: 768px) {
+		padding: 4em 5em;
+	}
 	@media (min-width: 1183px) {
 		margin-left: 265px;
 	}
@@ -295,11 +319,28 @@ img {
 // PAGES
 // =========================================================
 
+.page-title {
+	font-weight: 900;
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	&:after {
+		background-color: $color-primary;
+		content: '';
+		display: block;
+		font-size: 30px;
+		height: 2px;
+		margin: 0.5em auto 1em;
+		width: 3em;
+	}
+}
+
+// Project
 .single .post {
 	@extend %padding;
 }
 
-
+// About
 .about {
 	@extend %padding;
 	h2 {
@@ -320,6 +361,22 @@ img {
 	}
 }
 
+// Contact
+.page-contact .contact-form label {
+	display: none;
+}
+.wpcf7-submit {
+	background: $color-primary;
+	color: $white;
+	cursor: pointer;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	&:hover {
+		background: darken($color-primary, 5);
+	}
+}
+
 // =========================================================
 // CONTENT BOILER PLATE
 // =========================================================
@@ -328,6 +385,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-style: $headerFontStyle;
 	font-weight: $headerFontWeight;
 	text-rendering: optimizeLegibility;
+	a:hover {
+		color: $color-primary;
+	}
 }
 h1 {
 	@include font-size(3.7);
@@ -371,19 +431,22 @@ h6 {
 		@extend h6;
 	}
 }
+
 p,
 li {
 	color: $bodyFontColor;
 	font-style: $bodyFontStyle;
 	font-weight: $bodyFontWeight;
-	line-height: 19px;
-	line-height: 1.9rem;
-	@include font-size(1.3);
+	line-height: 22px;
+	line-height: 2.2rem;
+	@include font-size(1.4);
 }
+
 a {
 	@extend p;
 	text-decoration: none;
 }
+
 a, 
 button, 
 input:focus, 
@@ -394,7 +457,33 @@ textarea {
 	@include transition(all 0.2s ease-in-out);
 }
 
-a img { border: 0; }
+input,
+input[type="password"],
+input[type="search"],
+textarea {
+	background: #f1f1f1;
+	border: 0;
+	color: $color-textTitle;
+	line-height: 1.5;
+	margin-bottom: 0.800em;
+	padding: 15px;
+	padding: 1.5rem;
+	width: 100%;
+	@include border-radius (5px);
+	@include font-size(1.4);
+}
+
+a img { 
+	border: 0;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    height: 0;
+    margin: 3em 0;
+}
 
 
 // =========================================================
