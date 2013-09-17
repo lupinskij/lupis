@@ -1,10 +1,13 @@
 jQuery(window).load(function(){
 
+  // Add class for opening sidebar animation
+  $('#header').addClass('open');
+
 }); // Window Load
 
 
 jQuery(document).ready(function(){
-	
+
 
   // Logo Animation
   $('#site-logo').hover(

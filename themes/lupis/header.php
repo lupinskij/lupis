@@ -54,7 +54,7 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 
     <body <?php body_class(); ?>>
 
-    <header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+    <header class="site-header" id="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
         <div class="site-header-wrapper">
             <div class="site-logo">
                 <a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>

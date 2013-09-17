@@ -39,7 +39,7 @@
 		</h3>
 		<?php //post title ?>
 
-		<?php the_field('excerpt'); ?>
+		<p><?php the_excerpt(); ?></p>
 
 		<div class="tags"><?php the_tags( __( '', 'lupis' ), ', ', ''); // Separated by commas with a line break at the end ?></div>
 	</section>
