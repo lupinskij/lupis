@@ -25,9 +25,11 @@
 	</article>
 
 	<aside class="sidebar widget-area col-half" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
-		<div class="location map">
-			<img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/location-providence.jpg" class="map" alt="Map of Providence, RI">
-			<div class="marker"></div>
+		<div class="location">
+			<img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/map.png" class="map" alt="Map of Providence, RI">
+			<span class="point">
+			  <span class="glow pulse"></span>
+			</span>
 		</div>
 	</aside>
 

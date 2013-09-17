@@ -9,11 +9,13 @@
 // ---------------------------------------------------------
 $color-backgroundBody: #ecf0f2;
 $color-primary: #f16e52;
+$color-primaryBorder: darken($color-primary, 15);
 $color-black25: #383d40;
 $color-black50: #323232;
 $color-textTitle: #383c3f;
 $color-textBody: #818b92;
-$color-accent: #c8cdd0;
+$color-accent: #d1d1d1;
+$color-accentBorder: darken($color-accent, 15);
 $color-post: #fff;
 $color-postBorder: #cfd1d0;
 $white: #fff;
