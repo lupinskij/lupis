@@ -1,27 +1,37 @@
 <?php get_header(); ?>
 
-<?php //article ?>
-<article id="post-<?php the_ID(); ?>" class="about post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<section class="page-content">
+	<?php //article ?>
+	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<h1 class="page-title"><?php the_title(); ?></h1>
 
-	<?php the_content(); ?>
+	<article id="post-<?php the_ID(); ?>" class="contact-form col-half" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
-<?php endwhile; ?>
+		<?php the_content(); ?>
 
-<?php else: ?>
+		<?php endwhile; ?>
+	
+		<?php else: ?>
+	
+			<?php //article ?>
+			<article>
+				<h2><?php _e( 'Sorry, nothing to display.', 'lupis' ); ?></h2>
+			</article>
+			<?php //article ?>
+	
+		<?php endif; ?>
 
-	<?php //article ?>
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'lupis' ); ?></h2>
 	</article>
-	<?php //article ?>
 
-<?php endif; ?>
+	<aside class="sidebar widget-area col-half" role="complementary" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+		<div class="location map">
+			<img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/location-providence.jpg" class="map" alt="Map of Providence, RI">
+			<div class="marker"></div>
+		</div>
+	</aside>
 
-</article>
+</section>
 
 
 <?php get_footer(); ?>

@@ -4,7 +4,11 @@
 a.menu-link {
     float: right;
     display: inline-block;
+    line-height: 0.8em;
     @include font-size(7.5);
+    @media(min-width: 768px) {
+    	line-height: 1.3em;
+    }
 }
 
 nav[role=navigation]{
