@@ -27,18 +27,18 @@ MMMMMMMMMMMMMMMDDD,...~DDDMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 -->
 <html <?php language_attributes(); ?> class="no-js">
-  <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+    <head>
+        <meta charset="<?php bloginfo('charset'); ?>">
+        <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-<?php // dns prefetch ?>
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <?php // dns prefetch ?>
+        <link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<?php // meta ?>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width">
-    <meta name="description" content="<?php bloginfo('description'); ?>">
+    <?php // meta ?>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width">
+        <meta name="description" content="<?php bloginfo('description'); ?>">
 
 <?php // icons ?>
     <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
@@ -50,20 +50,20 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
     <!--[if IE 8 ]><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/ie8.css"><![endif]-->
     <!--[if IE 8 ]><link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylesheets/ie8.css"><![endif]-->
     <!--[if IE 9 ]><link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylesheets/ie9.css"><![endif]-->
-  </head>
+    </head>
 
-  <body <?php body_class(); ?>>
+    <body <?php body_class(); ?>>
 
     <header class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-      <div class="site-header-wrapper">
-        <div class="site-logo">
-          <a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
-        </div>
+        <div class="site-header-wrapper">
+            <div class="site-logo">
+                <a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
+            </div>
 
-        <a href="#menu" class="menu-link icon">&#9776;</a>
-      </div>
-      <nav id="menu" class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-	  <?php 
+            <a href="#menu" class="menu-link icon">&#9776;</a>
+        </div>
+        <nav id="menu" class="nav-header" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	  <?php
 			// MAIN NAVIGATION //
 			// Uses Wordpress menus to generate main navigation
 			$navGridSize = (string)$brewer_grid_options['nav_main'];
@@ -83,16 +83,16 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 			);
 			wp_nav_menu($mainNav);
 		?>
-      </nav>
+        </nav>
 
-	  <section class="site-info" itemscope="itemscope">
-        <p>Hello. I'm a designer and front end developer based in Rhode Island. I dig usable websites, responsive web design, typography, and clean code.</p>
-      </section>
-		
-      <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-        <p>&copy; <?php the_time('Y'); ?> All rights reserved.</p>
-      </footer>
+        <section class="site-info" itemscope="itemscope">
+            <p>Hello. I'm a designer and front end developer based in Providence, Rhode Island. I dig usable websites, responsive web design, typography, and clean code.</p>
+        </section>
+
+        <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+            <p>&copy; <?php the_time('Y'); ?> All rights reserved.</p>
+        </footer>
     </header>
 
-	<div class="site-inner">
-		<main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+    <div class="site-inner">
+        <main class="content" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">

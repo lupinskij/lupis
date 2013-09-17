@@ -40,7 +40,7 @@
 html {
 	font-family: $fontFamily;
 	font-size: 62.5%; /* Sets up the Base 10 stuff */
-	@include box-sizing (border-box); 
+	@include box-sizing (border-box);
 }
 
 body {
@@ -148,7 +148,7 @@ img {
 .single .menu-item-home {
 	@extend .current-menu-item;
 }
-	
+
 .site-info {
 	display: none;
 	@media (min-width: 1183px) {
@@ -198,7 +198,7 @@ img {
 }
 
 //Post Content
-.post, 
+.post,
 .page-content {
 	background-color: $white;
 	margin: 0 auto 5em;
@@ -288,7 +288,7 @@ img {
 	background: $color-black25;
 	color: $white;
 	display: inline-block;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	padding: 7px 30px 10px;
 	text-transform: uppercase;
 	@include font-size(1.5);
@@ -312,7 +312,7 @@ img {
 }
 
 .port-info {
-	padding: 0 4em;
+	padding: 0 4em 3em;
 	p a {
 		color: $color-primary;
 		text-decoration: underline;
@@ -495,7 +495,7 @@ h2 {
 }
 h3 {
 	line-height: 1;
-	margin: 1.5em 0 0.5em;
+	margin: 1em 0 0.5em;
 	padding-bottom: 0.15em;
 	@include font-size(2.5);
 	a {
@@ -536,12 +536,12 @@ a {
 	text-decoration: none;
 }
 
-a, 
-button, 
-input:focus, 
-input[type="button"], 
-input[type="reset"], 
-input[type="submit"], 
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 textarea {
 	@include transition(all 0.2s ease-in-out);
 }
@@ -583,7 +583,7 @@ hr {
 	animation-name: floating;
 	-webkit-animation-name: floating;
 
-	animation-duration: 1.5s;	
+	animation-duration: 1.5s;
 	-webkit-animation-duration: 1.5s;
 
 	animation-iteration-count: infinite;
@@ -592,26 +592,26 @@ hr {
 
 @keyframes floating {
 	0% {
-		transform: translateY(0%);	
+		transform: translateY(0%);
 	}
 	50% {
-		transform: translateY(8%);	
-	}	
+		transform: translateY(8%);
+	}
 	100% {
 		transform: translateY(0%);
-	}			
+	}
 }
 
 @-webkit-keyframes floating {
 	0% {
-		-webkit-transform: translateY(0%);	
+		-webkit-transform: translateY(0%);
 	}
 	50% {
-		-webkit-transform: translateY(8%);	
-	}	
+		-webkit-transform: translateY(8%);
+	}
 	100% {
 		-webkit-transform: translateY(0%);
-	}			
+	}
 }
 
 // Glowing Map Marker
@@ -619,7 +619,7 @@ hr {
 	animation-name: pulse;
 	-webkit-animation-name: pulse;
 
-	animation-duration: 2s;	
+	animation-duration: 2s;
 	-webkit-animation-duration: 2s;
 
 	animation-iteration-count: infinite;
@@ -632,13 +632,13 @@ hr {
 @-webkit-keyframes pulse{
 	0%{
 		-webkit-transform:scale(0.32);opacity:.8;
-	} 
+	}
 	50%{
 		opacity:1;
-	} 
+	}
 	85%{
 		-webkit-transform:scale(1);
-	} 
+	}
 	100%{
 		-webkit-transform:scale(1);opacity:0;
 	}
@@ -671,7 +671,7 @@ hr {
 @-moz-keyframes reset{
 	0%{
 		top:-5px;opacity:0;
-	} 
+	}
 	100%{
 		top:0;opacity:1;
 	}
@@ -680,13 +680,13 @@ hr {
 @keyframes pulse{
 	0%{
 		transform:scale(0.32);opacity:.8;
-	} 
+	}
 	50%{
 		opacity:1;
-	} 
+	}
 	85%{
 		transform:scale(1);
-	} 
+	}
 	100%{
 		transform:scale(1);opacity:0;
 	}
@@ -695,7 +695,7 @@ hr {
 @keyframes reset{
 	0%{
 		top:-5px;opacity:0;
-	} 
+	}
 	100%{
 		top:0;opacity:1;
 	}
