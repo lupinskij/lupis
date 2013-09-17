@@ -5,6 +5,9 @@
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<h1 class="page-title"><?php the_title(); ?></h1>
+	<h2 class="page-intro">
+		I'm always interested to hear about new ideas, and collaborate on interesting projects. Get in touch with me, and let's make something awesome together.
+	</h2>
 
 	<article id="post-<?php the_ID(); ?>" class="contact-form col-half" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
