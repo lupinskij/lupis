@@ -574,41 +574,6 @@ hr {
 // ANIMATIONS
 // =========================================================
 
-//Intro header animation
-.site-header {
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-
-    transform-origin: 0 -50%;
-    -webkit-transform-origin: 0 -50%;
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-
-    animation: header 1s both;
-    -webkit-animation: header 1s both;
-}
-
-@-webkit-keyframes header {
-    0% {opacity: 0; -webkit-transform: rotateY(90deg); }
-    100% {opacity: 1; -webkit-transform: rotateY(0deg); }
-}
-
-@-moz-keyframes header {
-    0% {opacity: 0; -moz-transform: rotateY(90deg); }
-    100% {opacity: 1; -moz-transform: rotateY(0deg); }
-}
-
-@-o-keyframes header {
-    0% {opacity: 0; -o-transform: rotateY(90deg); }
-    100% {opacity: 1; -o-transform: rotateY(0deg); }
-}
-
-@keyframes header {
-    0% {opacity: 0; transform: rotateY(90deg); }
-    100% {opacity: 1; transform: rotateY(0deg); }
-}
-
 //Logo float on roll over
 .floating{
 	animation-name: floating;
