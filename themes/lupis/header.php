@@ -31,25 +31,25 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
         <meta charset="<?php bloginfo('charset'); ?>">
         <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-    <?php // dns prefetch ?>
+<?php // dns prefetch ?>
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-    <?php // meta ?>
+<?php // meta ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width">
         <meta name="description" content="<?php bloginfo('description'); ?>">
 
 <?php // icons ?>
-    <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-    <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-<?php wp_head(); ?>
+        <?php wp_head(); ?>
 
-  <?php // IE CONDITIONAL STYLESHEETS // ?>
-    <!--[if IE 8 ]><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/ie8.css"><![endif]-->
-    <!--[if IE 8 ]><link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylesheets/ie8.css"><![endif]-->
-    <!--[if IE 9 ]><link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylesheets/ie9.css"><![endif]-->
+<?php // IE CONDITIONAL STYLESHEETS // ?>
+        <!--[if IE 8 ]><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/ie8.css"><![endif]-->
+        <!--[if IE 8 ]><link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylesheets/ie8.css"><![endif]-->
+        <!--[if IE 9 ]><link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/stylesheets/ie9.css"><![endif]-->
     </head>
 
     <body <?php body_class(); ?>>

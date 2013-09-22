@@ -7,20 +7,19 @@
 	font-size: $sizeValue + rem;
 }
 
+//Set border radius to default 2px for easy changing
+@mixin borderRadius($radius: 2px) {
+	background-clip: padding-box;  // stops bg color from leaking outside the border
+	@include border-radius ($radius);
+}
+
+//Clearfix
 %group {
 	&:after {
 		content: "";
 		display: table;
 		clear: both;
 	}
-}
-
-%smallTitle {
-	font-weight: 700;
-	letter-spacing: 1px;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
-	@include font-size(1.3);
 }
 
 // =========================================================
@@ -200,11 +199,11 @@ img {
 //Post Content
 .post,
 .page-content {
+	@extend %group;
 	background-color: $white;
 	margin: 0 auto 5em;
 	max-width: 850px;
 	@include box-shadow (0px 1px 1px rgba(170, 170, 170, 0.4));
-	@extend %group;
 	@media (min-width: 1183px) {
 		margin: 0 0 5em;
 	}
@@ -239,7 +238,7 @@ img {
 		padding: 0.35em 0;
 		background-color: #fff;
 		color: $black;
-		@include border-radius(5em);
+		@include borderRadius(5em);
 	}
 	.link {
 		cursor: pointer;
@@ -326,10 +325,10 @@ img {
 .page-numbers {
 	background: $color-primary;
 	border-bottom: 2px solid $color-primaryBorder;
-	border-radius: 2px;
 	color: $white;
 	font-size: 13px;
 	padding: 1em;
+	@include borderRadius;
 	&:hover {
 		background: $color-accent;
 		border-bottom: 2px solid $color-accentBorder;
@@ -395,24 +394,22 @@ img {
 
 // Contact
 .map {
-	border-radius: 2px;
 	overflow: hidden;
+	@include borderRadius;
 }
 
 .point {
 	background: #f16e52;
 	background-position: -1px -1px;
-	border-radius: 50%;
-	box-shadow: 0 1px 6px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.2) inset;
 	display: block;
 	height: 1em;
 	left: 132px;
     position: absolute;
     top: 140px;
 	width: 1em;
+	@include borderRadius(50%);
+	@include box-shadow(0 1px 6px rgba(0,0,0,0.3), 0 0 2px rgba(0,0,0,0.2) inset);
 	.glow {
-		border-radius: 50%;
-		box-shadow: 0 0 0.2em 0.12em #f16e52;
 		display: block;
 		height: 100%;
 		left: 0px;
@@ -420,28 +417,30 @@ img {
         top: 0px;
 		width: 100%;
 		-webkit-animation: blip 1200ms infinite;
+		@include borderRadius(50%);
+		@include box-shadow (0 0 0.2em 0.12em #f16e52);
 	}
 }
 
 span.wpcf7-not-valid-tip {
 	background: #f16e52;
 	border: 0;
-	border-radius: 2px;
 	color: $white;
 	padding: 0.5em;
 	top: -9px;
+	@include borderRadius;
 }
 
 .wpcf7-submit {
 	background: $color-primary;
 	border-bottom: 2px solid $color-primaryBorder;
-	border-radius: 2px;
 	color: $white;
 	cursor: pointer;
 	font-weight: 700;
 	letter-spacing: 1px;
 	padding: 15px;
 	text-transform: uppercase;
+	@include borderRadius;
 	&:hover {
 		background: $color-accent;
 		border-bottom: 2px solid $color-accentBorder;
@@ -451,11 +450,10 @@ span.wpcf7-not-valid-tip {
 div.wpcf7-validation-errors {
 	background: #eee;
 	border: 0;
-	border-radius: 2px;
 	font-size: 14px;
 	margin: 0;
 	padding: 1em;
-	;
+	@include borderRadius;
 }
 
 
@@ -547,7 +545,6 @@ input[type="search"],
 textarea {
 	background: #f1f1f1;
 	border: 0;
-	border-radius: 2px;
 	color: $color-textTitle;
 	line-height: 1.5;
 	margin-bottom: 0.800em;
@@ -555,6 +552,7 @@ textarea {
 	padding: 1.2rem;
 	width: 100%;
 	@include font-size(1.4);
+	@include borderRadius;
 }
 
 textarea {
