@@ -433,6 +433,9 @@ span.wpcf7-not-valid-tip {
 
 .wpcf7-submit {
 	background: $color-primary;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
 	border-bottom: 2px solid $color-primaryBorder;
 	color: $white;
 	cursor: pointer;
@@ -548,11 +551,26 @@ textarea {
 	color: $color-textTitle;
 	line-height: 1.5;
 	margin-bottom: 0.800em;
-	padding: 12px;
-	padding: 1.2rem;
+	padding: 11px;
+	padding: 1.1rem;
 	width: 100%;
 	@include font-size(1.4);
 	@include borderRadius;
+}
+
+input,
+textarea {
+	border: 2px solid #f1f1f1;
+	margin-top: 0;
+}
+
+input:focus,
+textarea:focus {
+	background: white;
+	border: 2px solid #f16e52;
+	border-radius: 2px;
+	color: #3c3c3c;
+	outline: none;
 }
 
 textarea {
