@@ -26,7 +26,7 @@ MMMMMMMMMMMM8DD,...ZDI....DDDMMMMMMMMMMMM
 MMMMMMMMMMMMMMMDDD,...~DDDMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 -->
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" itemscope="" itemtype="http://schema.org/WebPage">
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
         <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
@@ -38,11 +38,11 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 <?php // meta ?>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=device-width">
-        <meta name="description" content="<?php bloginfo('description'); ?>">
+        <meta name="description" content="Hello. I'm a designer and front end developer based in Providence, Rhode Island. I dig usable websites, responsive web design, typography, and clean code.">
 
 <?php // icons ?>
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon" itemprop="image">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed" itemprop="image">
 
         <?php wp_head(); ?>
 
@@ -86,7 +86,7 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
         </nav>
 
         <section class="site-info" itemscope="itemscope">
-            <p>Hello. I'm a designer and front end developer based in Providence, Rhode Island. I dig usable websites, responsive web design, typography, and clean code.</p>
+            <p itemprop="description">Hello. I'm a designer and front end developer based in Providence, Rhode Island. I dig usable websites, responsive web design, typography, and clean code.</p>
         </section>
 
         <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
