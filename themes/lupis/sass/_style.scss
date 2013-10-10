@@ -152,11 +152,9 @@ img {
 	display: none;
 	@media (min-width: 1183px) {
 		display: block;
-		margin-top: 2em;
-		padding: 25px;
-		padding: 2.5rem;
+		padding: 45px 25px 30px;
+		padding: 4.5rem 2.5rem 3.0rem;
 	}
-
 	&:after {
 		content: '';
 		width: 80px;
@@ -173,15 +171,30 @@ img {
 	}
 }
 
-.site-footer p {
+.site-footer {
 	display: none;
-	@include font-size(1.2);
 	@media (min-width: 1183px) {
 		display: block;
+	}
+	p {
 		font-weight: 700;
 		letter-spacing: 1px;
 		letter-spacing: 0.1rem;
 		text-transform: uppercase;
+		@include font-size(1.2);
+	}
+	.social {
+		@extend %group;
+		display: block;
+		padding-bottom: 1em;
+		a {
+			display: inline;
+			font-weight: $fontSocialWeight;
+			@include font-size(5);
+			&:hover {
+				color: #C3C3C3;
+			}
+		}
 	}
 }
 
@@ -219,8 +232,8 @@ img {
 
 .port-thumbnail {
 	float: left;
-	z-index: 50;
 	overflow: hidden;
+	z-index: 50;
 	@media (min-width: 877px) {
 		margin-right: 5%;
 	}
@@ -229,22 +242,22 @@ img {
 		display: block;
 	}
 	.icon {
-		width: 1em;
-		height: 1em;
-		position: absolute;
-		left: 50%;
-		font-size: 5em;
-		text-align: center;
-		padding: 0.35em 0;
 		background-color: #fff;
 		color: $black;
+		height: 1em;
+		left: 50%;
+		padding: 0.35em 0;
+		position: absolute;
+		text-align: center;
+		width: 1em;
 		@include borderRadius(5em);
+		@include font-size(7);
 	}
 	.link {
 		cursor: pointer;
-		top: -1em;
 		margin-top: -0.5em;
 		margin-left: -1.25em;
+		top: -1em;
 		@include transition(top 200ms);
 		&:only-child {
 			margin-left: -0.5em;
@@ -260,12 +273,12 @@ img {
 		}
 	}
 	.overlay {
-		z-index: 52;
-		position: absolute;
-		top: 0;
-		left: 0;
 		bottom: 0;
+		left: 0;
+		position: absolute;
 		right: 0;
+		top: 0;
+		z-index: 52;
 	}
 	&:hover {
 		.overlay {
@@ -294,7 +307,13 @@ img {
 }
 
 .icon {
-	font-family: "Icon";
+	font-family: $fontIcon;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-social {
+	font-family: $fontSocial;
+	-webkit-font-smoothing: antialiased;
 }
 
 .clock {

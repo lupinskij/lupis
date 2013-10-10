@@ -90,6 +90,12 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
         </section>
 
         <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+            <span class="social">
+                <a href="http://dribbble.com/JeffLupinski" class="dribbble icon-social">&#62236;</a>
+                <a href="http://jefflupinski.tumblr.com" class="tumblr icon-social">&#62230;</a>
+                <a href="http://twitter.com/jefflupinski" class="twitter icon-social">&#62218;</a>
+                <a href="http://www.linkedin.com/profile/view?id=87927635" class="linkedin icon-social">&#62233;</a>
+            </span>
             <p>&copy; <?php the_time('Y'); ?> All rights reserved.</p>
         </footer>
     </header>
