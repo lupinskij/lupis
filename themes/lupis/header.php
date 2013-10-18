@@ -57,7 +57,9 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
     <header class="site-header" id="header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
         <div class="site-header-wrapper">
             <div class="site-logo">
-                <a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
+                <h1 class="site-title" itemprop="headline">
+                    <a href="<?php echo home_url(); ?>"><img itemprop="image" src="<?php bloginfo('template_directory'); ?>/img/logo-jeff.svg" id="site-logo" class="site-logo-image" alt="Jeff Lupinski"></a>
+                </h1>
             </div>
 
             <a href="#menu" class="menu-link icon">&#9776;</a>
@@ -85,9 +87,9 @@ MMMMMMMMMMMMMMMMMMDDDDDMMMMMMMMMMMMMMMMMM
 		?>
         </nav>
 
-        <section class="site-info" itemscope="itemscope">
+        <div class="site-info" itemscope="itemscope">
             <p itemprop="description">Hello. I'm a designer and front end developer based in Providence, Rhode Island. I dig usable websites, responsive web design, typography, and clean code.</p>
-        </section>
+        </div>
 
         <footer class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
             <span class="social">

@@ -3,7 +3,7 @@
   <?php //article ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 
-	<section class="port-thumbnail">
+	<div class="port-thumbnail">
 	  <?php //post thumbnail ?>
 	  <?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 
@@ -23,9 +23,9 @@
 	    </div><?php //.overlay ?>
 	  </a>
 	  <?php endif; ?>
-	</section><?php //post thumbnail ?>
+	</div><?php //post thumbnail ?>
 
-	<section class="port-info">
+	<div class="port-info">
 		<?php //post details ?>
 		<div class="date">
 			<i class="clock">&#128340;</i>
@@ -42,7 +42,7 @@
 		<p><?php the_excerpt(); ?></p>
 
 		<div class="tags"><?php the_tags( __( '', 'lupis' ), ', ', ''); // Separated by commas with a line break at the end ?></div>
-	</section>
+	</div>
 
 	</article>
 	<?php //article ?>

@@ -69,7 +69,7 @@ nav[role=navigation]{
 		}
 	}
 	.single .menu-item-home {
-		@extend .current-menu-item;
+		background-color: transparent;
 	}
 }
 
