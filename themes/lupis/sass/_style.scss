@@ -520,6 +520,31 @@ div.wpcf7-validation-errors {
 	@include borderRadius;
 }
 
+span.wpcf7-not-valid-tip {
+	left: 35%;
+	width: 180px;
+}
+
+.wpcf7-not-valid-tip::before {
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-right: 7px solid #f16e52;
+	content: '';
+	display: block;
+	height: 0;
+	left: -7px;
+	position: absolute;
+	width: 0;
+}
+
+div.wpcf7-validation-errors {
+	color: #555;
+}
+
+.ajax-loader {
+	display: none;
+}
+
 
 // =========================================================
 // CONTENT BOILER PLATE
