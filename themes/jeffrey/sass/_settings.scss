@@ -1,0 +1,41 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/reset";
+
+// =========================================================
+// YOUR THEME'S VARIABLES HERE
+// =========================================================
+// Colors
+// ---------------------------------------------------------
+$color-backgroundBody: #fff;
+$color-primary: #ea8462;
+$color-textTitle: #383c3f;
+$color-textBody: #677582;
+$color-accent: #d1d1d1;
+$color-accentBorder: darken($color-accent, 15);
+$color-pageIntro: #636467;
+$white: $color-backgroundBody;
+$black: #222;
+$dribbble: #ea4c89;
+//Footer
+$colorBackgroundSitefooter: #3d3d3d;
+$colorFooterPrimary: #696969;
+$colorFooterAccent: #303030;
+
+// Fonts
+// ---------------------------------------------------------
+$fontFamily: "adelle", serif;
+//Header Font Styles
+$headerFontFamily: "brandon-grotesque", "brandon grotesque", sans-serif;
+$headerFontWeight: 700;
+$headerFontStyle: normal;
+$headerFontColor: $color-textTitle;
+//Body Font Styles
+$bodyFontFamily: $fontFamily;
+$bodyFontWeight: 300;
+$bodyFontStyle: normal;
+$bodyFontColor: $color-textBody;
+//Social Icons
+$fontSocial: "Social";
+$fontSocialWeight: 400;
+$fontIcon: "Icon";
