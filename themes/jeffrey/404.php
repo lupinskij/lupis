@@ -1,20 +1,6 @@
-<?php get_header(); ?>
-
-	<!-- section -->
-	<section role="main">
-	
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
-			<h1><?php _e( 'Page not found', 'lupis' ); ?></h1>
-			<h2>
-				<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'lupis' ); ?></a>
-			</h2>
-			
-		</article>
-		<!-- /article -->
-		
-	</section>
-	<!-- /section -->
-
-<?php get_footer(); ?>
+<?php
+	//Redirect to homepage
+	header("HTTP/1.1 301 Moved Permanently");
+	header("Location: ".get_bloginfo('url'));
+	exit();
+?>

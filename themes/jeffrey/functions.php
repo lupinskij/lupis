@@ -56,6 +56,11 @@
         return 40;
     }
 
+    // Remove auto <p> tags in Excerpt (Manual Excerpts only)
+    function filter_ptags_on_images($content){
+       return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+    }
+
     // Create the Custom Excerpts callback
     function jeffreyWP_excerpt($length_callback = '', $more_callback = '')
     {
@@ -209,10 +214,10 @@
     remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
     // Add Filters
-    add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
     add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
     add_filter('excerpt_more', 'html5_blank_view_article'); // Add 'View Article' button instead of [...] for Excerpts
     add_filter( 'body_class', 'add_slug_body_class' );
+    add_filter('the_content', 'filter_ptags_on_images'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
 
     // Remove Filters
     remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
