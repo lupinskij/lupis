@@ -3,96 +3,96 @@
 // =========================================================
 //Set font size in rem and provide pixel fallback
 @mixin font-size($sizeValue: 1.3) {
-	font-size: ($sizeValue * 10) + px;
-	font-size: $sizeValue + rem;
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
 }
 
 //Set border radius to default 2px for easy changing
 @mixin borderRadius($radius: 3px) {
-	background-clip: padding-box;  // stops bg color from leaking outside the border
-	@include border-radius ($radius);
+  background-clip: padding-box;  // stops bg color from leaking outside the border
+  @include border-radius ($radius);
 }
 
 @mixin text-shadow($color) {
-	text-shadow: 2px 2px 0 $color;
+  text-shadow: 2px 2px 0 $color;
 }
 
 //Clearfix
 %group {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 //center
 %center {
-	margin: 0 auto;
-	text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 // =========================================================
 // FURNITURE
 // =========================================================
 ::selection {
-	background-color: $color-primary;
-	color: $white;
+  background-color: $color-primary;
+  color: $white;
 }
 
 * {
-	position: relative;
-	@include transition(color 300ms, background 300ms);
-	@include box-sizing(border-box);
+  position: relative;
+  @include transition(color 300ms, background 300ms);
+  @include box-sizing(border-box);
 }
 
 html {
-	font-family: $fontFamily;
-	font-size: 62.5%; /* Sets up the Base 10 stuff */
-	@include box-sizing (border-box);
+  font-family: $fontFamily;
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+  @include box-sizing (border-box);
 }
 
 body {
-	background: $color-backgroundBody;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+  background: $color-backgroundBody;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 .button {
-	background: none;
-	border-width: 2px;
-	border-style: solid;
-	display: inline-block;
-	font-family: $headerFontFamily;
-	font-weight: $headerFontWeight;
-	letter-spacing: 2px;
-	outline: 0;
-	padding: 10px 25px;
-	text-decoration: none;
-	text-transform: uppercase;
-	@include borderRadius;
-	@include font-size(1.3);
-	@include transition (all 0.3s ease-in-out);
+  background: none;
+  border-width: 2px;
+  border-style: solid;
+  display: inline-block;
+  font-family: $headerFontFamily;
+  font-weight: $headerFontWeight;
+  letter-spacing: 2px;
+  outline: 0;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include borderRadius;
+  @include font-size(1.3);
+  @include transition (all 0.3s ease-in-out);
 }
 
 .icon {
-	font-family: $fontIcon;
-	-webkit-font-smoothing: antialiased;
+  font-family: $fontIcon;
+  -webkit-font-smoothing: antialiased;
 }
 
 .icon-social {
-	font-family: $fontSocial;
-	-webkit-font-smoothing: antialiased;
+  font-family: $fontSocial;
+  -webkit-font-smoothing: antialiased;
 }
 
 .wrap {
-	@extend %group;
-	margin: 0 auto;
-	max-width: 1000px;
+  @extend %group;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .aligncenter {
-	margin: 0 auto;
+  margin: 0 auto;
     text-align: center;
 }
 
@@ -107,100 +107,100 @@ body {
 // =========================================================
 // Home
 .site-header {
-	@extend %center;
-	background: $color-primary url(../img/pattern.png) repeat;
-	padding: 4em 2em;
-	.home & {
-		padding: 4em 2em 5em;
-	}
-	h1 {
-		color: $white;
-		font-weight: 900;
-		letter-spacing: 4px;
-		padding-bottom: 5px;
-		text-transform: uppercase;
-		@include font-size(3.0);
-		@include text-shadow(#cb6747);
+  @extend %center;
+  background: $color-primary url(../img/pattern.png) repeat;
+  padding: 4em 2em;
+  .home & {
+    padding: 4em 2em 5em;
+  }
+  h1 {
+    color: $white;
+    font-weight: 900;
+    letter-spacing: 4px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    @include font-size(3.0);
+    @include text-shadow(#cb6747);
         @media screen and (min-width: 400px) {
             @include font-size(3.5);
         }
-		a {
-			color: $white;
-			text-decoration: none;
-		}
-	}
-	span {
-		color: $white;
-		font-family: $headerFontFamily;
-		font-weight: 400;
-		@include font-size(2.0);
-	}
-	.head {
-		background: $white;
-		border: 4px solid $white;
-		border-radius: 144px;
-		display: inline-block;
-		height: 90px;
-		margin: 3em auto -9em auto;
-		overflow: hidden;
-		width: 90px;
-		z-index: 55;
-	}
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  span {
+    color: $white;
+    font-family: $headerFontFamily;
+    font-weight: 400;
+    @include font-size(2.0);
+  }
+  .head {
+    background: $white;
+    border: 4px solid $white;
+    border-radius: 144px;
+    display: inline-block;
+    height: 90px;
+    margin: 3em auto -9em auto;
+    overflow: hidden;
+    width: 90px;
+    z-index: 55;
+  }
 }
 
 .amp {
-	font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
-	font-size: 110%;
-	font-style: italic;
-	font-weight: normal;
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-size: 110%;
+  font-style: italic;
+  font-weight: normal;
 }
 
 .site-footer {
-	background: $colorBackgroundSitefooter;
-	clear: both;
-	padding: 4em 1em;
+  background: $colorBackgroundSitefooter;
+  clear: both;
+  padding: 4em 1em;
     @media only screen and (min-width: 400px) {
         padding: 5em 2em;
     }
-	p {
-		@extend %center;
-		color: $white;
-		max-width: 42em;
+  p {
+    @extend %center;
+    color: $white;
+    max-width: 42em;
         @media only screen and (max-width: 480px) {
             line-height: 1.7;
         }
-		&:after {
-			background-color: $colorFooterPrimary;
-			content: '';
-			display: block;
-			height: 3px;
-			margin: 25px auto 30px;
-			width: 60px;
-		}
-	}
-	.social {
-		@extend %group;
-		display: block;
-		text-align: center;
-		a {
-			background: $colorFooterAccent;
-			border-radius: 50em;
-			color: $colorFooterPrimary;
-			display: inline-block;
-			font-weight: $fontSocialWeight;
-			margin-right: 0.200em;
-			text-align: center;
-			text-decoration: none;
-			width: 50px;
-			@include font-size(5);
-			&:hover {
-				color: #C3C3C3;
-			}
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-	}
+    &:after {
+      background-color: $colorFooterPrimary;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 25px auto 30px;
+      width: 60px;
+    }
+  }
+  .social {
+    @extend %group;
+    display: block;
+    text-align: center;
+    a {
+      background: $colorFooterAccent;
+      border-radius: 50em;
+      color: $colorFooterPrimary;
+      display: inline-block;
+      font-weight: $fontSocialWeight;
+      margin-right: 0.200em;
+      text-align: center;
+      text-decoration: none;
+      width: 50px;
+      @include font-size(5);
+      &:hover {
+        color: #C3C3C3;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 // =========================================================
@@ -208,220 +208,220 @@ body {
 // =========================================================
 
 .site-info {
-	@extend %center;
-	background: $color-backgroundBody url(../img/pattern.png) repeat;
-	padding: 6em 2em;
-	p {
-		@extend %center;
-		line-height: 1.7;
-		max-width: 38em;
-		@include font-size(1.7);
+  @extend %center;
+  background: $color-backgroundBody url(../img/pattern.png) repeat;
+  padding: 6em 2em;
+  p {
+    @extend %center;
+    line-height: 1.7;
+    max-width: 38em;
+    @include font-size(1.7);
         @media only screen and (min-width: 400px) {
             line-height: 2;
         }
-	}
-	.button {
-		border-color: lighten($bodyFontColor, 20%);
-		color: $bodyFontColor;
-		margin: 2em auto 0;
-		&:hover {
-			background: $bodyFontColor;
+  }
+  .button {
+    border-color: lighten($bodyFontColor, 20%);
+    color: $bodyFontColor;
+    margin: 2em auto 0;
+    &:hover {
+      background: $bodyFontColor;
             border-color: $bodyFontColor;
-			color: #fff;
-		}
-	}
+      color: #fff;
+    }
+  }
 }
 
 .port-thumbnail {
-	display: inline-block;
-	float: left;
-	margin: 0;
-	overflow: hidden;
-	position: relative;
-	width: 33.2999999999999999%;
-	@media only screen and (max-width: 1020px) {
-		width: 50%;
-	}
-	@media only screen and (max-width: 580px) {
-		width: 100%;
-	}
-	a {
-		display: block;
-	}
-	.icon {
-		background-color: $white;
-		color: #666;
-		height: 1em;
-		left: 50%;
-		position: absolute;
-		text-align: center;
-		width: 1em;
-		@include borderRadius(5em);
-		@include font-size(7);
-	}
-	.link {
-		cursor: pointer;
-		margin-top: -0.5em;
-		margin-left: -1.25em;
-		top: -1em;
-		@include transition(top 200ms);
-		&:only-child {
-			margin-left: -0.5em;
-		}
-	}
-	.look {
-		bottom: -1em;
-		margin-bottom: -0.5em;
-		margin-left: 0.25em;
-		@include transition(bottom 200ms);
-		&:only-child {
-			margin-left: -0.5em;
-		}
-	}
-	.overlay {
-		bottom: 0;
-		left: 0;
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: 52;
-	}
-	&:hover {
-		.overlay {
-			background-color: rgba($color-primary, 0.7);
-		}
-		.link {
-			top: 50%;
-		}
-		.look {
-			bottom: 50%;
-		}
-	}
-	img {
-		display: block;
-		max-width: 100;
-		width: 100%;
-	}
+  display: inline-block;
+  float: left;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 33.2999999999999999%;
+  @media only screen and (max-width: 1020px) {
+    width: 50%;
+  }
+  @media only screen and (max-width: 580px) {
+    width: 100%;
+  }
+  a {
+    display: block;
+  }
+  .icon {
+    background-color: $white;
+    color: #666;
+    height: 1em;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    width: 1em;
+    @include borderRadius(5em);
+    @include font-size(7);
+  }
+  .link {
+    cursor: pointer;
+    margin-top: -0.5em;
+    margin-left: -1.25em;
+    top: -1em;
+    @include transition(top 200ms);
+    &:only-child {
+      margin-left: -0.5em;
+    }
+  }
+  .look {
+    bottom: -1em;
+    margin-bottom: -0.5em;
+    margin-left: 0.25em;
+    @include transition(bottom 200ms);
+    &:only-child {
+      margin-left: -0.5em;
+    }
+  }
+  .overlay {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 52;
+  }
+  &:hover {
+    .overlay {
+      background-color: rgba($color-primary, 0.7);
+    }
+    .link {
+      top: 50%;
+    }
+    .look {
+      bottom: 50%;
+    }
+  }
+  img {
+    display: block;
+    max-width: 100;
+    width: 100%;
+  }
 }
 
 .dribbble-connect {
-	background: $colorFooterAccent url(../img/dribbble.png) no-repeat -5% center;
-	clear: both;
-	padding: 3em 1em;
-	text-align: center;
+  background: $colorFooterAccent url(../img/dribbble.png) no-repeat -5% center;
+  clear: both;
+  padding: 3em 1em;
+  text-align: center;
     @media only screen and (min-width: 400px) {
         padding: 4em 2em;
     }
-	p {
-		color: $white;
-		font-family: $headerFontFamily;
+  p {
+    color: $white;
+    font-family: $headerFontFamily;
         line-height: 1.7;
-		@include font-size(2.0);
+    @include font-size(2.0);
         @media only screen and (min-width: 400px) {
             @include font-size(2.5);
         }
-	}
-	a {
-		border-bottom: none;
-		color: $dribbble;
-		padding-bottom: 10px;
-		@include transition (all 250ms ease-out 0.1s);
-		&:hover {
-			border-bottom: 2px solid $dribbble;
-			padding-bottom: 0;
-		}
-	}
+  }
+  a {
+    border-bottom: none;
+    color: $dribbble;
+    padding-bottom: 10px;
+    @include transition (all 250ms ease-out 0.1s);
+    &:hover {
+      border-bottom: 2px solid $dribbble;
+      padding-bottom: 0;
+    }
+  }
 }
 
 .page-intro {
-	color: $color-pageIntro;
-	line-height: 26px;
-	line-height: 2.6rem;
-	margin: -0.5em auto 1.8em;
-	text-align: center;
-	@include font-size(1.6);
-	@media (min-width: 768px) {
-		max-width: 600px;
-	}
+  color: $color-pageIntro;
+  line-height: 26px;
+  line-height: 2.6rem;
+  margin: -0.5em auto 1.8em;
+  text-align: center;
+  @include font-size(1.6);
+  @media (min-width: 768px) {
+    max-width: 600px;
+  }
 }
 
 .project-info {
-	@extend %group;
-	background: #fcf6ed;
-		padding: 5em 1em;
+  @extend %group;
+  background: #fcf6ed;
+    padding: 5em 1em;
 }
 
 .project-description {
-	float: left;
-	padding: 0 15px;
-	h3 {
-		font-family: $bodyFontFamily;
-		font-weight: 400;
-		margin-top: 0;
-	}
-	p {
-		line-height: 1.5;
-	}
+  float: left;
+  padding: 0 15px;
+  h3 {
+    font-family: $bodyFontFamily;
+    font-weight: 400;
+    margin-top: 0;
+  }
+  p {
+    line-height: 1.5;
+  }
 }
 
 .project-about {
-	margin-bottom: 5%;
-	@media (min-width: 768px) {
-		margin-bottom: 0;
-		width: 65%;
-	}
+  margin-bottom: 5%;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    width: 65%;
+  }
 }
 
 .project-role {
-	@media (min-width: 768px) {
-		width: 35%;
-	}
+  @media (min-width: 768px) {
+    width: 35%;
+  }
 }
 
 .project-shots-wrap {
-	margin: 0 auto;
-	max-width: 791px;
-	padding: 5em 1em;
+  margin: 0 auto;
+  max-width: 791px;
+  padding: 5em 1em;
 }
 
 // About
 .about-content {
-	margin: 0 auto;
-	max-width: 850px;
-	padding: 2em;
-	@media(min-width: 768px) {
-		padding: 4em;
-	}
-	h3 {
-		font-weight: 900;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		@include font-size(1.6);
-	}
-	ul {
-		list-style: disc;
-		margin-left: 3em;
-	}
+  margin: 0 auto;
+  max-width: 850px;
+  padding: 2em;
+  @media(min-width: 768px) {
+    padding: 4em;
+  }
+  h3 {
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    @include font-size(1.6);
+  }
+  ul {
+    list-style: disc;
+    margin-left: 3em;
+  }
 }
 
 
 .page-title {
-	font-weight: 900;
-	letter-spacing: 5px;
-	text-align: center;
-	text-transform: uppercase;
-	.single & {
-		@include text-shadow(#f3dbb7);
-	}
-	&:after {
-		background-color: $color-primary;
-		content: '';
-		display: block;
-		font-size: 30px;
-		height: 2px;
-		margin: 0.500em auto 0.500em;
-		width: 3em;
-	}
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  .single & {
+    @include text-shadow(#f3dbb7);
+  }
+  &:after {
+    background-color: $color-primary;
+    content: '';
+    display: block;
+    font-size: 30px;
+    height: 2px;
+    margin: 0.500em auto 0.500em;
+    width: 3em;
+  }
 }
 
 .section-title {
@@ -458,76 +458,76 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $headerFontColor;
-	font-family: $headerFontFamily;
-	font-style: $headerFontStyle;
-	font-weight: $headerFontWeight;
+  color: $headerFontColor;
+  font-family: $headerFontFamily;
+  font-style: $headerFontStyle;
+  font-weight: $headerFontWeight;
     @include transition (font-size 0.3s ease-out);
 }
 h1 {
-	@include font-size(3.7);
-	a {
-		@extend h1;
-	}
-	.archive & {
-		padding-bottom: 0.500em;
-	}
+  @include font-size(3.7);
+  a {
+    @extend h1;
+  }
+  .archive & {
+    padding-bottom: 0.500em;
+  }
 }
 h2 {
-	@include font-size(3.0);
-	a {
-		@extend h2;
-	}
+  @include font-size(3.0);
+  a {
+    @extend h2;
+  }
 }
 h3 {
-	line-height: 1;
-	margin: 1em 0 0.5em;
-	padding-bottom: 0.15em;
-	@include font-size(2.3);
-	a {
-		@extend h3;
-	}
+  line-height: 1;
+  margin: 1em 0 0.5em;
+  padding-bottom: 0.15em;
+  @include font-size(2.3);
+  a {
+    @extend h3;
+  }
 }
 h4 {
-	@include font-size(2.1);
-	a {
-		@extend h4;
-	}
+  @include font-size(2.1);
+  a {
+    @extend h4;
+  }
 }
 h5 {
-	@include font-size(1.9);
-	a {
-		@extend h5;
-	}
+  @include font-size(1.9);
+  a {
+    @extend h5;
+  }
 }
 h6 {
-	@include font-size(1.6);
-	a {
-		@extend h6;
-	}
+  @include font-size(1.6);
+  a {
+    @extend h6;
+  }
 }
 
 p,
 li {
-	color: $bodyFontColor;
-	font-family: $bodyFontFamily;
-	font-style: $bodyFontStyle;
-	font-weight: $bodyFontWeight;
-	line-height: 2;
-	@include font-size(1.7);
+  color: $bodyFontColor;
+  font-family: $bodyFontFamily;
+  font-style: $bodyFontStyle;
+  font-weight: $bodyFontWeight;
+  line-height: 2;
+  @include font-size(1.7);
     @include hyphens (auto);
     @include transition (font-size 0.3s ease-out);
 }
 
 a {
-	text-decoration: none;
-	&:active,
-	&:hover {
-		outline: 0;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
+  text-decoration: none;
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
 }
 
 hr {
@@ -546,27 +546,27 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	@include transition(all 0.2s ease-in-out);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  @include transition(all 0.2s ease-in-out);
 }
 
 input,
 input[type="password"],
 input[type="search"],
 textarea {
-	background: #f1f1f1;
-	border: 0;
-	color: $color-textTitle;
-	line-height: 1.5;
-	margin-bottom: 0.800em;
-	padding: 12px;
-	padding: 1.2rem;
-	width: 100%;
-	@include font-size(1.4);
-	@include borderRadius;
+  background: #f1f1f1;
+  border: 0;
+  color: $color-textTitle;
+  line-height: 1.5;
+  margin-bottom: 0.800em;
+  padding: 12px;
+  padding: 1.2rem;
+  width: 100%;
+  @include font-size(1.4);
+  @include borderRadius;
 }
 
 textarea {
-	line-height: 1;
+  line-height: 1;
 }
